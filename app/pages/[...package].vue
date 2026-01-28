@@ -811,7 +811,7 @@ defineOgImageComponent('Package', {
       />
 
       <!-- Binary-only packages: Show only execute command (no install) -->
-      <section v-if="isBinaryOnly" aria-labelledby="run-heading" class="area-install">
+      <section v-if="isBinaryOnly" aria-labelledby="run-heading" class="area-install scroll-mt-20">
         <div class="flex flex-wrap items-center justify-between mb-3">
           <h2 id="run-heading" class="text-xs text-fg-subtle uppercase tracking-wider">Run</h2>
           <!-- Package manager tabs -->
@@ -1071,6 +1071,17 @@ defineOgImageComponent('Package', {
         </div>
       </section>
 
+      <!-- Vulnerability scan - full width -->
+      <div class="area-vulns">
+        <ClientOnly>
+          <PackageVulnerabilityTree
+            v-if="displayVersion"
+            :package-name="pkg.name"
+            :version="displayVersion.version"
+          />
+        </ClientOnly>
+      </div>
+
       <!-- README -->
       <section
         id="readme"
@@ -1217,12 +1228,13 @@ defineOgImageComponent('Package', {
 
           <!-- Dependencies -->
           <PackageDependencies
-            v-if="hasDependencies"
+            v-if="hasDependencies && displayVersion"
             :package-name="pkg.name"
-            :dependencies="displayVersion?.dependencies"
-            :peer-dependencies="displayVersion?.peerDependencies"
-            :peer-dependencies-meta="displayVersion?.peerDependenciesMeta"
-            :optional-dependencies="displayVersion?.optionalDependencies"
+            :version="displayVersion.version"
+            :dependencies="displayVersion.dependencies"
+            :peer-dependencies="displayVersion.peerDependencies"
+            :peer-dependencies-meta="displayVersion.peerDependenciesMeta"
+            :optional-dependencies="displayVersion.optionalDependencies"
           />
         </aside>
       </div>
