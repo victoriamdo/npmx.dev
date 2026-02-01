@@ -783,7 +783,7 @@ function handleClick(event: MouseEvent) {
                 class="text-fg-subtle hover:text-fg transition-colors duration-200 inline-flex items-center justify-center min-w-6 min-h-6 -m-1 p-1"
                 :title="$t('package.stats.view_dependency_graph')"
               >
-                <span class="i-carbon:network-3 w-3.5 h-3.5 inline-block" aria-hidden="true" />
+                <span class="i-carbon:network-3 w-3.5 h-3.5" aria-hidden="true" />
                 <span class="sr-only">{{ $t('package.stats.view_dependency_graph') }}</span>
               </a>
 
@@ -795,10 +795,7 @@ function handleClick(event: MouseEvent) {
                 class="text-fg-subtle hover:text-fg transition-colors duration-200 inline-flex items-center justify-center min-w-6 min-h-6 -m-1 p-1"
                 :title="$t('package.stats.inspect_dependency_tree')"
               >
-                <span
-                  class="i-solar:eye-scan-outline w-3.5 h-3.5 inline-block"
-                  aria-hidden="true"
-                />
+                <span class="i-solar:eye-scan-outline w-3.5 h-3.5" aria-hidden="true" />
                 <span class="sr-only">{{ $t('package.stats.inspect_dependency_tree') }}</span>
               </a>
             </dd>
@@ -932,7 +929,7 @@ function handleClick(event: MouseEvent) {
             >
               {{ $t('package.get_started.title') }}
               <span
-                class="i-carbon:link w-3 h-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                class="i-carbon:link w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                 aria-hidden="true"
               />
             </a>
@@ -984,7 +981,7 @@ function handleClick(event: MouseEvent) {
           >
             {{ $t('package.readme.title') }}
             <span
-              class="i-carbon:link w-3 h-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              class="i-carbon:link w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               aria-hidden="true"
             />
           </a>
@@ -1022,7 +1019,7 @@ function handleClick(event: MouseEvent) {
               >
                 {{ $t('package.keywords_title') }}
                 <span
-                  class="i-carbon:link w-3 h-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                  class="i-carbon:link w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                   aria-hidden="true"
                 />
               </a>
@@ -1072,7 +1069,7 @@ function handleClick(event: MouseEvent) {
               >
                 {{ $t('package.compatibility') }}
                 <span
-                  class="i-carbon:link w-3 h-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                  class="i-carbon:link w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                   aria-hidden="true"
                 />
               </a>
